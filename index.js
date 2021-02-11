@@ -17,7 +17,10 @@ app.get('/', (req, res) => {
 app.get('/maze', (req, res) =>{
 	const { width, height, seed } = req.query;
 	// Maybe do a typecheck on width and height here
-	const m = new Maze(width || 15, height || 15, seed);
+	const m = new Maze(
+		width || 15,
+		height || 15, 
+		seed);
 	res.render('maze', {
 		cells: m.toArray().join(","),
 		width: m.width,
@@ -25,6 +28,6 @@ app.get('/maze', (req, res) =>{
 	});
 });
 
-app.listen(3000, () => {
-  console.log(`Example app listening at http://localhost:3000`)
+app.listen(443, () => {
+  console.log(`Example app listening at http://localhost:443`)
 });

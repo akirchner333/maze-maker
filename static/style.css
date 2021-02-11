@@ -1,0 +1,39 @@
+body{
+  background: pink;
+}
+
+#maze{
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.cell{
+  box-sizing: border-box;
+  display: inline-block;
+  height: 25px;
+  margin: 0;
+  width: 25px;
+}
+
+.row{
+  line-height: 0.7;
+  margin: 0;
+}
+
+.north{
+  border-top: solid 1px black;
+}
+
+.east{
+  border-right: solid 1px black;
+}
+
+.south{
+  border-bottom: solid 1px black;
+}
+
+.west{
+  border-left: solid 1px black;
+}

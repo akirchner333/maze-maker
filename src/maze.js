@@ -70,6 +70,10 @@ class Maze{
 		}
 		return output;
 	}
+
+	toArray(){
+		return this.cells.map(cell => cell.numerical());
+	}
 }
 
 module.exports = {

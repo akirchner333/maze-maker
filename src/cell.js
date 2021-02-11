@@ -45,6 +45,15 @@ class Cell{
 		}
 		return output;
 	}
+
+	numerical(){
+		let output = 0;
+		output += this.links.includes(this.north) ? 1 : 0;
+		output += this.links.includes(this.east) ? 2 : 0;
+		output += this.links.includes(this.south) ? 4 : 0;
+		output += this.links.includes(this.west) ? 8 : 0;
+		return output;
+	}
 }
 
 module.exports = {

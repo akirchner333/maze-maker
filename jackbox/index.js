@@ -28,6 +28,6 @@ app.get('/maze', (req, res) =>{
 	});
 });
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log("App Start!")
+app.listen(443, () => {
+  console.log(`Example app listening at http://localhost:443`)
 });

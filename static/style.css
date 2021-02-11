@@ -1,13 +1,57 @@
-body{
-  background: pink;
+body {
+  background: #E8E5DA;
+  color: #143109;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#random-maze{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px
+}
+
+#maze-form{
+  display: flex;
+  justify-content: center;
+}
+
+#maze-form table{
+  margin-bottom: 20px;
+}
+
+#maze-form form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#maze-form input[type="number"]{
+  width: 70px;
+}
+
+#maze-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 #maze{
-  border-top: 2px solid black;
-  border-right: 2px solid black;
   display: inline-block;
+  border-width: 0 0 3px 3px;
+  border-color: #083D77;
+  border-style: solid;
   white-space: nowrap;
 }
+
+.row{
+  line-height: 0.7;
+  margin: 0;
+}
+
 
 .cell{
   box-sizing: border-box;
@@ -17,23 +61,18 @@ body{
   width: 25px;
 }
 
-.row{
-  line-height: 0.7;
-  margin: 0;
-}
-
 .north{
-  border-top: solid 1px black;
+  border-top: solid 3px #083D77;
 }
 
 .east{
-  border-right: solid 1px black;
+  border-right: solid 3px #083D77;
 }
 
 .south{
-  border-bottom: solid 1px black;
+  border-bottom: solid 2px #083D77;
 }
 
 .west{
-  border-left: solid 1px black;
+  border-left: solid 2px #083D77;
 }

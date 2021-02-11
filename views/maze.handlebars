@@ -1,5 +1,6 @@
-<div>Here is your maze!</div>
-<div id="maze"></div>
+<div id="maze-container">
+	<div id="maze"></div>
+</div>
 
 <script>
 	const width = {{width}};
@@ -7,3 +8,6 @@
 	const cells = [{{cells}}];
 </script>
 <script src="./maze.js"></script>
+
+<h2>Make Another Maze</h2>
+{{> form}}

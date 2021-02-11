@@ -15,12 +15,12 @@ for(var i = 0; i < height; i++){
 		if((cell & 2) === 0){
 			cellDiv.classList.add("east");
 		}
-		if((cell & 4) === 0){
-			cellDiv.classList.add("south");
-		}
-		if((cell & 8) === 0){
-			cellDiv.classList.add("west");
-		}
+		// if((cell & 4) === 0){
+		// 	cellDiv.classList.add("south");
+		// }
+		// if((cell & 8) === 0){
+		// 	cellDiv.classList.add("west");
+		// }
 
 		row.appendChild(cellDiv);
 	}

@@ -5,7 +5,7 @@ let tick = 0;
 
 function setup(){
 	const canvas = createCanvas(width * cellSize + 50, height * cellSize + 50);
-	canvas.parent('canvas');
+	canvas.parent("canvas");
 }
 
 function draw(){

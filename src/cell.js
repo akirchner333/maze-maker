@@ -2,7 +2,7 @@ class Cell{
 	constructor(x, y){
 		this.x = x;
 		this.y = y;
-		this.north = undefined;
+	  this.north = undefined;
 		this.east = undefined;
 		this.west = undefined;
 		this.south = undefined;
@@ -11,7 +11,7 @@ class Cell{
 
 	neighbors(){
 		const neighbors = [];
-		['north', 'east', 'west', 'south'].forEach(direction => {
+		["north", "east", "west", "south"].forEach(direction => {
 			if(this[direction]){
 				neighbors.push(this[direction]);
 			}

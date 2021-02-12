@@ -1,26 +1,26 @@
 <div id="format">
-	Maze Format: 
-	<input type="radio" id="css-button" name="format" value="css">
-	<label for="css-button">CSS</label>
-	<input type="radio" id="text-button" name="format" value="text">
-	<label for="text-button">ASCII</label>
-	<input type="radio" id="canvas-button" name="format" value="canvas">
-	<label for="canvas-button">Playable</label>
+  Maze Format: 
+  <input type="radio" id="css-button" name="format" value="css" checked="checked">
+  <label for="css-button">CSS</label>
+  <input type="radio" id="text-button" name="format" value="text">
+  <label for="text-button">ASCII</label>
+  <input type="radio" id="canvas-button" name="format" value="canvas">
+  <label for="canvas-button">Playable</label>
 </div>
 
 <div id="css-maze">
-	<div id="maze"></div>
+  <div id="maze"></div>
 </div>
 
 <div id="text-maze" class="hide">
-	<pre>
+  <pre>
 {{text}}
-	</pre>
+  </pre>
 </div>
 
 <div id="canvas-maze" class="hide">
-	<div id="canvas"></div>
-	<div>Use WASD to move around the maze!</div>
+  <div id="canvas"></div>
+  <div>Use WASD to move around the maze!</div>
 </div>
 
 <h2>Make Another Maze</h2>
@@ -29,9 +29,9 @@
 {{> random}}
 
 <script>
-	const width = {{width}};
-	const height = {{height}};
-	const cells = [{{cells}}];
+  const width = {{width}};
+  const height = {{height}};
+  const cells = [{{cells}}];
 </script>
-<script src="./maze.js"></script>
+<script src="./script.js"></script>
 <script src="./game.js"></script>

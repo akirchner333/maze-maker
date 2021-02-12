@@ -18,7 +18,15 @@
 	</pre>
 </div>
 
-<div id="canvas-maze" class="hide"></div>
+<div id="canvas-maze" class="hide">
+	<div id="canvas"></div>
+	<div>Use WASD to move around the maze!</div>
+</div>
+
+<h2>Make Another Maze</h2>
+{{> form width=width height=height}}
+
+{{> random}}
 
 <script>
 	const width = {{width}};
@@ -27,8 +35,3 @@
 </script>
 <script src="./maze.js"></script>
 <script src="./game.js"></script>
-
-<h2>Make Another Maze</h2>
-{{> form width=width height=height}}
-
-{{> random}}

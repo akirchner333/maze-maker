@@ -5,13 +5,21 @@ let tick = 0;
 
 function setup(){
 	const canvas = createCanvas(width * cellSize + 50, height * cellSize + 50);
-	canvas.parent('canvas-maze');
+	canvas.parent('canvas');
 }
 
 function draw(){
-	background("#E8E5DA");
-	fill("#E8E5DA");
+	if(canvasVisible){
+		background("#E8E5DA");
+		fill("#E8E5DA");
 
+		playMovement();
+
+		drawMaze();
+	}
+}
+
+function playMovement(){
 	tick += deltaTime;
 	if(canvasVisible && tick > 150){
 		const index = y * width + x;
@@ -32,8 +40,9 @@ function draw(){
 			tick = 0;
 		}
 	}
+}
 
-
+function drawMaze(){
 	rect(25, 25, cellSize * width, cellSize * height);
 	for(var i = 0; i < height; i++){
 		for(var j = 0; j < width; j++){
@@ -46,26 +55,29 @@ function draw(){
 				square((j + 0.25) * cellSize + 25, (i + 0.25) * cellSize + 25, cellSize / 2);
 			}
 
-
-			strokeWeight(4);
-			stroke("#083D77");
-
-			if((cell & 1) == 0){
-				line(
-					j * cellSize + 25,
-					i * cellSize + 25,
-					j * cellSize + cellSize + 25,
-					i * cellSize + 25
-				);
-			}
-			if((cell & 2) == 0){
-				line(
-					j * cellSize + cellSize + 25,
-					i * cellSize + 25,
-					j * cellSize + cellSize + 25,
-					i * cellSize + cellSize + 25
-				);
-			}
+			drawCell(j, i, cell);
 		}
+	}
+}
+
+function drawCell(x, y, cell){
+	strokeWeight(4);
+	stroke("#083D77");
+
+	if((cell & 1) == 0){
+		line(
+			x * cellSize + 25,
+			y * cellSize + 25,
+			x * cellSize + cellSize + 25,
+			y * cellSize + 25
+		);
+	}
+	if((cell & 2) == 0){
+		line(
+			x * cellSize + cellSize + 25,
+			y * cellSize + 25,
+			x * cellSize + cellSize + 25,
+			y * cellSize + cellSize + 25
+		);
 	}
 }

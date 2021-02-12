@@ -42,10 +42,14 @@ h1, h2 {
   padding: 5px;
 }
 
-#css-maze, #text-maze{
+#css-maze, #text-maze, #canvas-maze{
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+}
+
+#css-maze{
+  margin-top: 20px;
 }
 
 #text-maze{

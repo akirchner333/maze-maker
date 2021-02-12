@@ -1,9 +1,15 @@
 <div id="format">
 	Maze Format: 
-	<input type="radio" id="css" name="format" value="css">
-	<label for="css">CSS</label>
-	<input type="radio" id="text" name="format" value="text">
-	<label for="text">ASCII</label>
+	<input type="radio" id="css-button" name="format" value="css">
+	<label for="css-button">CSS</label>
+	<input type="radio" id="text-button" name="format" value="text">
+	<label for="text-button">ASCII</label>
+	<input type="radio" id="canvas-button" name="format" value="canvas">
+	<label for="canvas-button">Playable</label>
+</div>
+
+<div id="css-maze">
+	<div id="maze"></div>
 </div>
 
 <div id="text-maze" class="hide">
@@ -12,9 +18,7 @@
 	</pre>
 </div>
 
-<div id="css-maze">
-	<div id="maze"></div>
-</div>
+<div id="canvas-maze" class="hide"></div>
 
 <script>
 	const width = {{width}};
@@ -22,6 +26,7 @@
 	const cells = [{{cells}}];
 </script>
 <script src="./maze.js"></script>
+<script src="./game.js"></script>
 
 <h2>Make Another Maze</h2>
 {{> form width=width height=height}}

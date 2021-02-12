@@ -26,6 +26,7 @@ class Maze{
 		this.buildMaze();
 	}
 
+	// Builds the maze using recursive backtracking
 	buildMaze(){
 		const start = this.randomCell();
 		const stack = [start];

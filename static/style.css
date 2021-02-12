@@ -7,6 +7,7 @@ h1, h2 {
   text-align: center;
 }
 
+/* Home Page Styling */
 #random-maze{
   display: flex;
   justify-content: center;
@@ -34,16 +35,17 @@ h1, h2 {
   width: 70px;
 }
 
-#css-maze, #text-maze{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
+/* Maze Page Styling */
 #format{
   border: 1px solid black;
   display: inline-block;
   padding: 5px;
+}
+
+#css-maze, #text-maze{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 #text-maze{
@@ -54,6 +56,11 @@ pre{
   margin: 0;
 }
 
+.hide{
+  display: none !important;
+}
+
+/* Drawing the CSS maze itself */
 #maze{
   display: inline-block;
   border-width: 0 0 3px 3px;
@@ -66,7 +73,6 @@ pre{
   line-height: 0.7;
   margin: 0;
 }
-
 
 .cell{
   box-sizing: border-box;
@@ -90,8 +96,4 @@ pre{
 
 .west{
   border-left: solid 2px #083D77;
-}
-
-.hide{
-  display: none !important;
 }

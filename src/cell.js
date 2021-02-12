@@ -46,6 +46,7 @@ class Cell{
 		return output;
 	}
 
+	// Represents the cell as a single number, encoding which sides are open
 	numerical(){
 		let output = 0;
 		output += this.links.includes(this.north) ? 1 : 0;

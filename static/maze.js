@@ -1,3 +1,4 @@
+// Generating the maze
 const mazeDiv = document.getElementById("maze");
 
 for(var i = 0; i < height; i++){
@@ -21,6 +22,7 @@ for(var i = 0; i < height; i++){
 	mazeDiv.appendChild(row);
 }
 
+// Switching maze formats
 const textMaze = document.getElementById("text-maze");
 const cssMaze = document.getElementById("css-maze");
 

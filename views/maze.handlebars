@@ -1,4 +1,18 @@
-<div id="maze-container">
+<div id="format">
+	Maze Format: 
+	<input type="radio" id="css" name="format" value="css">
+	<label for="css">CSS</label>
+	<input type="radio" id="text" name="format" value="text">
+	<label for="text">ASCII</label>
+</div>
+
+<div id="text-maze" class="hide">
+	<pre>
+{{text}}
+	</pre>
+</div>
+
+<div id="css-maze">
 	<div id="maze"></div>
 </div>
 
@@ -10,4 +24,6 @@
 <script src="./maze.js"></script>
 
 <h2>Make Another Maze</h2>
-{{> form}}
+{{> form width=width height=height}}
+
+{{> random}}

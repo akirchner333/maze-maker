@@ -15,14 +15,21 @@ for(var i = 0; i < height; i++){
 		if((cell & 2) === 0){
 			cellDiv.classList.add("east");
 		}
-		// if((cell & 4) === 0){
-		// 	cellDiv.classList.add("south");
-		// }
-		// if((cell & 8) === 0){
-		// 	cellDiv.classList.add("west");
-		// }
 
 		row.appendChild(cellDiv);
 	}
 	mazeDiv.appendChild(row);
 }
+
+const textMaze = document.getElementById("text-maze");
+const cssMaze = document.getElementById("css-maze");
+
+document.getElementById("text").onclick = (e) => {
+	textMaze.setAttribute('class', '');
+	cssMaze.setAttribute('class', 'hide');
+};
+
+document.getElementById("css").onclick = (e) => {
+	textMaze.setAttribute('class', 'hide');
+	cssMaze.setAttribute('class', '');
+};
